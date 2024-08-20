@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            margin: 5px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <p>Masukkan dua angka:</p>
+    <input type="number" id="angka1" placeholder="Angka pertama">
+    <input type="number" id="angka2" placeholder="Angka kedua">
+    <br>
+    <button onclick="hitung()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitung() {
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 = parseFloat(document.getElementById("angka2").value);
+            var hasil = angka1 + angka2;
+
+            if (hasil === 42) {  // Misalkan 42 adalah jumlah yang kita inginkan untuk mencetak "Hello World"
+                document.getElementById("hasil").innerText = "Hello World";
+            } else {
+                document.getElementById("hasil").innerText = "hello world";
+            }
+        }
+    </script>
+</body>
+</html>
